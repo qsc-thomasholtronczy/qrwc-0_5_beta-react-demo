@@ -7,10 +7,10 @@ import Toggle from '../components/Toggle'
 export default function PageView({ controls}: any) {
     return (
         <Stack direction="column" spacing={2} justifyContent="center" sx={{ mb: 4 }} alignItems="center">
-            <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+            {/* <Typography variant="h5" sx={{ color: 'text.secondary' }}>
                 Audio Controls
-            </Typography>
-            <Stack direction="row" spacing={6} justifyContent="center" alignItems="center" sx={{ mb: 4}}>
+            </Typography> */}
+            <Stack direction="column" spacing={2} justifyContent="center" alignItems="center" sx={{ mb: 4}}>
                 <Box
                 sx={(theme) => ({
                     ...displayCardSx(theme),
@@ -28,11 +28,11 @@ export default function PageView({ controls}: any) {
                         alignItems="center"
                         sx={{ p: 2, minHeight: 0 }}  // use padding instead of margin for predictable sizing
                     >
+                        <Typography variant="h6" sx={{ color: 'text.secondary' }}>
+                        Inputs
+                        </Typography>
                         <Typography variant="body1" sx={{ color: 'text.secondary' }}>
                         Microphone Input
-                        </Typography>
-                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        Level
                         </Typography>
                         <Meter control={controls.MicrophoneInput} />
                     </Stack>
@@ -58,11 +58,11 @@ export default function PageView({ controls}: any) {
                         alignItems="center"
                         sx={{ p: 2, minHeight: 0 }}  // use padding instead of margin for predictable sizing
                     >
-                        <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-                        Loudspeaker Outputs
+                        <Typography variant="h6" sx={{ color: 'text.secondary' }}>
+                        Outputs
                         </Typography>
-                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        Level
+                        <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+                        Loudspeakers
                         </Typography>
                         <Meter control={controls.LoudspeakerOut1}/>
                         <Meter control={controls.LoudspeakerOut2}/>

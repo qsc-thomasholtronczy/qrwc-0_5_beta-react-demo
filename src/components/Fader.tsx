@@ -102,7 +102,7 @@ if (!control) {
     })
 
     return (
-    <Stack sx={{ height: 300 }} spacing={2} direction="column" alignItems="center">
+    <Stack sx={{ height: 250 }} spacing={2} direction="column" alignItems="center">
         <Slider
             sx={(theme) => pillThumbSx(theme)}
             aria-label={label || control?.component.name + "-" + control?.name || "Fader"}

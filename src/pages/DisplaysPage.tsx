@@ -7,9 +7,9 @@ import VideoRouting from '../components/VideoRouting'
 export default function PageView({ controls }: any) {
   return (
     <Stack direction="column" spacing={2} justifyContent="center" alignItems="center" sx={{ mb: 4 }}>
-      <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+      {/* <Typography variant="h5" sx={{ color: 'text.secondary' }}>
         Displays
-      </Typography>
+      </Typography> */}
 
       <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 4 }} alignItems="center">
         {/* Left Display */}

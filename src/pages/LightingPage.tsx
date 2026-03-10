@@ -7,7 +7,7 @@ import Momentary from '../components/Momentary'
 export default function PageView({ controls}: any) {
     return (
         <Stack direction="column" spacing={2} justifyContent="center" sx={{ mb: 4 }} alignItems="center">
-            <Box sx={(theme) => ({ ...displayCardSx(theme), minHeight:SECTION_HEIGHT, width: '50%' })}>
+            <Box sx={(theme) => ({ ...displayCardSx(theme), minHeight: 0, width: '50%' })}>
             <Stack direction="column" spacing={2} justifyContent="center" sx={{ m:4}} alignItems="center">
                 <Typography variant="h6" sx={{ color: 'text.secondary' }}>
                     Faders

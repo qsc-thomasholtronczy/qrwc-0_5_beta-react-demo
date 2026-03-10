@@ -1,5 +1,5 @@
 import React from 'react'
-import { displayCardSx, SECTION_HEIGHT } from '../surfaces'
+import { displayCardSx } from '../surfaces'
 import {Box, Stack, Typography } from '@mui/material'
 import IndicatorText from '../components/IndicatorText'
 import Momentary from '../components/Momentary'
@@ -8,8 +8,8 @@ import HvacState from '../components/HvacLed'
 
 export default function PageView({ controls}: any) {
     return (
-        <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 4 }} alignItems="center">
-        <Box sx={(theme) => ({ ...displayCardSx(theme), minHeight:SECTION_HEIGHT, width: '40%' })}>
+        <Stack direction="column" spacing={2} justifyContent="center" sx={{ mb: 4 }} alignItems="center">
+        <Box sx={(theme) => ({ ...displayCardSx(theme), minHeight:0, width: '40%' })}>
         <Stack direction="column" spacing={2} justifyContent="center" sx={{ m:4 }} alignItems="center">
             <Typography variant="h6" sx={{ color: 'text.secondary' }}>
                 AC Controls
@@ -43,8 +43,8 @@ export default function PageView({ controls}: any) {
             </Stack>
         </Stack>
         </Box>
-        <Box sx={(theme) => ({ ...displayCardSx(theme), minHeight:SECTION_HEIGHT, width: '40%' })}>
-            <Stack direction="column" spacing={2} justifyContent="center" sx={{ m:4, height: '100%', display: 'grid', gridTemplateRows: 'auto 1fr 1fr 1fr', gap: 1.5, alignItems: 'stretch'}} alignItems="center">
+        <Box sx={(theme) => ({ ...displayCardSx(theme), minHeight:0, width: '40%' })}>
+            <Stack direction="column" spacing={2} justifyContent="center" sx={{ m:2, display: 'grid', gridTemplateRows: 'auto 1fr 1fr 1fr', alignItems: 'stretch'}} alignItems="center">
                 <Typography variant="h6" sx={{ color: 'text.secondary' }}>
                     Shades Controls
                 </Typography>

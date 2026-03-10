@@ -1,5 +1,5 @@
 import React from 'react'
-import { displayCardSx, SECTION_HEIGHT, SECTION_WIDTH } from '../surfaces'
+import { displayCardSx } from '../surfaces'
 import {Box, Stack, Typography } from '@mui/material'
 import { useAirwallState } from '../components/AirwallState'
 import Trigger from '../components/Trigger'
@@ -8,10 +8,10 @@ export default function PageView({ controls }: any) {
     const airwallState = useAirwallState(controls.AirwallState)
     return (
         <Stack direction="column" spacing={4} justifyContent="center" sx={{ mb:4 }} alignItems="center">
-            <Typography variant='h5' sx={{ color: 'text.primary'}}>
+            {/* <Typography variant='h5' sx={{ color: 'text.primary'}}>
                 Room Layout
             </Typography>
-            
+             */}
             <Box
                 sx={(theme) => ({
                     ...displayCardSx(theme),
