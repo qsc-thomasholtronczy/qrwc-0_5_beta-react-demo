@@ -5,7 +5,7 @@ import { useAirwallState } from '../components/AirwallState'
 import Trigger from '../components/Trigger'
 
 export default function PageView({ controls }: any) {
-    const airwallState = useAirwallState(controls['RL-FlipFlop']['state'])
+    const airwallState = useAirwallState(controls['RL-FlipFlop']?.['state'])
     return (
         <Stack direction="column" spacing={4} justifyContent="center" sx={{ mb:4 }} alignItems="center">
             {/* <Typography variant='h5' sx={{ color: 'text.primary'}}>
@@ -48,8 +48,8 @@ export default function PageView({ controls }: any) {
                     Airwall Controls
                 </Typography>
                 <Stack direction="row" spacing={2} alignItems='center' sx={{mb:4}}>
-                    <Trigger control={controls['RL-FlipFlop']['set']} label="Combine"/>
-                    <Trigger control={controls['RL-FlipFlop']['reset']} label="Separate"/>
+                    <Trigger control={controls['RL-FlipFlop']?.['set']} label="Combine"/>
+                    <Trigger control={controls['RL-FlipFlop']?.['reset']} label="Separate"/>
                 </Stack>
             </Stack>
             </Box> 
