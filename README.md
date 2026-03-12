@@ -16,8 +16,8 @@ This repo is an example of how to use the QRWC library with React using MUI
 - Use existing code as a reference to setup further components/controls
 
 ## Some notes
-
+- Q-SYS Control Names are stored in ControlMap.tsx, and directly match the code access naming scheme in Q-SYS Designer. Component Controls table allows for nested arrays, to allow for attaching multiple controls to a single component
 - `/components` are the React components representing controls from a QSYS design
-  - they should only recieve information relvant to the specific control
+- they should only recieve information relvant to the specific control defined in the page view
 - The structure laid out in this project and above is what makes React re-render when something changes without using state
 - MUI has extensive documentation for almost any UI elemnet you can think of and this project is setup to use them

@@ -20,11 +20,11 @@ export default function PageView({ controls }: any) {
               Left Display
             </Typography>
 
-            <PowerButton control={controls.DisplayLeftPower} />
+            <PowerButton control={controls['LD-Controls']?.['toggle.1']} />
 
             <VideoRouting
-              choiceControl={controls.LeftDisplayName}
-              indexControl={controls.LeftDisplayIndex}
+              choiceControl={controls['Display-Routing']?.['hdmi.out.1.select.pretty.name']}
+              indexControl={controls['Display-Routing']?.['hdmi.out.1.select.index']}
               labels={['Graphic 1', 'Graphic 2', 'Logo', 'Laptop', 'Wall Plate', 'BYOD Input']}
               icons={['Panorama', 'Panorama', 'Panorama', 'Computer', 'SettingsInputHdmi', 'Tv']}
             />
@@ -38,11 +38,11 @@ export default function PageView({ controls }: any) {
               Right Display
             </Typography>
 
-            <PowerButton control={controls.DisplayRightPower} />
+            <PowerButton control={controls['LD-Controls']?.['toggle.2']} />
 
             <VideoRouting
-              choiceControl={controls.RightDisplayName}
-              indexControl={controls.RightDisplayIndex}
+              choiceControl={controls['Display-Routing']?.['hdmi.out.2.select.pretty.name']}
+              indexControl={controls['Display-Routing']?.['hdmi.out.2.select.index']}
               labels={['Graphic 1', 'Graphic 2', 'Logo', 'Laptop', 'Wall Plate', 'BYOD Input']}
               icons={['Panorama', 'Panorama', 'Panorama', 'Computer', 'SettingsInputHdmi', 'Tv']}
             />

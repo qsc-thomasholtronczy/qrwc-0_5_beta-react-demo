@@ -34,11 +34,11 @@ export default function PageView({ controls}: any) {
                         <Typography variant="body1" sx={{ color: 'text.secondary' }}>
                         Microphone Input
                         </Typography>
-                        <Meter control={controls.MicrophoneInput} />
+                        <Meter control={controls['AC-Meters']?.['meter.1']} />
                     </Stack>
                 {/* Footer area (always at bottom) */}
                 <Box sx={{ p: 2, pt: 0, display: 'flex', justifyContent: 'center' }}>
-                    <Toggle control={controls.MicrophoneMute} falseLabel="Unmuted" trueLabel="Muted" />
+                    <Toggle control={controls['AC-Gain_1']?.['mute']} falseLabel="Unmuted" trueLabel="Muted" />
                 </Box>
                 </Box>
                 <Box
@@ -64,12 +64,12 @@ export default function PageView({ controls}: any) {
                         <Typography variant="body1" sx={{ color: 'text.secondary' }}>
                         Loudspeakers
                         </Typography>
-                        <Meter control={controls.LoudspeakerOut1}/>
-                        <Meter control={controls.LoudspeakerOut2}/>
+                        <Meter control={controls['AC-Meters']?.['meter.2']}/>
+                        <Meter control={controls['AC-Meters']?.['meter.3']}/>
                     </Stack>
                     {/* Footer area (always at bottom) */}
                     <Box sx={{ p: 2, pt: 0, display: 'flex', justifyContent: 'center' }}>
-                        <Toggle control={controls.LoudspeakerMute} falseLabel='Unmuted' trueLabel='Muted'/>
+                        <Toggle control={controls['AC-Gain_2']?.['mute']} falseLabel='Unmuted' trueLabel='Muted'/>
                     </Box>
                 </Box>
             </Stack>

@@ -168,7 +168,7 @@ function App() {
           >
             {/* Left */}
             <Box sx={{ justifySelf: 'start', minWidth: 0 }}>
-              <CoreStatus control={controls.DesignStatus} />
+              <CoreStatus control={controls['Design-Status']?.['status']} />
             </Box>
 
             {/* Center */}

@@ -18,26 +18,26 @@ export default function PageView({ controls}: any) {
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                 Current Temp
                 </Typography>
-                <IndicatorText control={controls.ACCurrentTemp} /> 
+                <IndicatorText control={controls['HVAC v2']?.['currentTemp']} /> 
             </Stack>
             <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 4 }} alignItems="center">
                 <Stack direction="column" spacing={2} justifyContent="center" sx={{ mb: 4 }} alignItems="center">
-                <HvacButton control={controls.ACUp} icon="KeyboardArrowUp"/>
-                <IndicatorText control={controls.ACSetPoint} />
-                <HvacButton control={controls.ACDown} icon="KeyboardArrowDown"/>
+                <HvacButton control={controls['HVAC v2']?.['Up']} icon="KeyboardArrowUp"/>
+                <IndicatorText control={controls['HVAC v2']?.['setPoint']} />
+                <HvacButton control={controls['HVAC v2']?.['Down']} icon="KeyboardArrowDown"/>
                 </Stack>
                 <Stack direction="column" spacing={2} justifyContent="center" sx={{ mb: 4 }} alignItems="center">
                 <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 4 }} alignItems="center">
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     Heat On
                     </Typography>
-                    <HvacState control={controls.HeatOn} color='red' icon='LocalFireDepartment' />
+                    <HvacState control={controls['HVAC v2']?.['HeatOn']} color='red' icon='LocalFireDepartment' />
                 </Stack>
                 <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 4 }} alignItems="center">
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     Cool On
                     </Typography>
-                    <HvacState control={controls.ACOn} color='#0166FF' icon='AcUnit' />
+                    <HvacState control={controls['HVAC v2']?.['ACOn']} color='#0166FF' icon='AcUnit' />
                 </Stack>
                 </Stack>
             </Stack>
@@ -48,9 +48,9 @@ export default function PageView({ controls}: any) {
                 <Typography variant="h6" sx={{ color: 'text.secondary' }}>
                     Shades Controls
                 </Typography>
-                <Momentary control={controls.ShadesUp} label="Open Shades"/>
-                <Momentary control={controls.ShadesCustom} label="Custom Shades"/>
-                <Momentary control={controls.ShadesDown} label="Close Shades"/>
+                <Momentary control={controls['HVAC-Shades']?.['output.1.input.3.select']} label="Open Shades"/>
+                <Momentary control={controls['HVAC-Shades']?.['output.1.input.2.select']} label="Custom Shades"/>
+                <Momentary control={controls['HVAC-Shades']?.['output.1.input.1.select']} label="Close Shades"/>
             </Stack>
         </Box>
         </Stack>

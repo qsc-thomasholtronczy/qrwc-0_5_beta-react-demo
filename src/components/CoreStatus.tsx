@@ -55,7 +55,7 @@ export default function StatusText({ control }: { control: Control | undefined }
     
 
     //Status Mappings from Q-SYS
-    const isGreen = status === 0
+    const isGreen = status === 0 || status === 4
     const isYellow = status === 1
     const isRed = status === 2
 

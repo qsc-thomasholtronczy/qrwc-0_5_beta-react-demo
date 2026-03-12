@@ -1,5 +1,5 @@
 import React from 'react'
-import { displayCardSx, SECTION_HEIGHT } from '../surfaces'
+import { displayCardSx } from '../surfaces'
 import {Box, Stack, Typography } from '@mui/material'
 import Fader from '../components/Fader'
 import Momentary from '../components/Momentary'
@@ -14,10 +14,10 @@ export default function PageView({ controls}: any) {
                 </Typography>
                 
                 <Stack direction="row" spacing={6} justifyContent="center" alignItems="stretch" sx={{ mb: 4 }} >
-                    <Fader control={controls['LD-Perimeter']} label="Perimeter" min={0} max={100} step={1} unit={"%"}/>
-                    <Fader control={controls['LD-FrontWall']} label="Front Wall" min={0} max={100} step={1} unit={"%"}/>
-                    <Fader control={controls['LD-Table']} label="Table" min={0} max={100} step={1} unit={"%"}/>
-                    <Fader control={controls['LD-Master']} label="Master" min={0} max={100} step={1} unit={"%"}/>
+                    <Fader control={controls['LD-Controls']['percent.1']} label="Perimeter" min={0} max={100} step={20} unit={"%"}/>
+                    <Fader control={controls['LD-Controls']['percent.2']} label="Front Wall" min={0} max={100} step={1} unit={"%"}/>
+                    <Fader control={controls['LD-Controls']['percent.3']} label="Table" min={0} max={100} step={1} unit={"%"}/>
+                    <Fader control={controls['LD-Controls']['percent.4']} label="Master" min={0} max={100} step={10} unit={"%"}/>
                 </Stack>
             </Stack>
             </Box> 
@@ -27,9 +27,9 @@ export default function PageView({ controls}: any) {
                     Presets
                 </Typography>
                 <Stack direction="row" spacing={6} justifyContent="center" sx={{ mb: 4 }} alignItems="center">             
-                    <Momentary control={controls.LightingPreset1} label="Preset 1" />
-                    <Momentary control={controls.LightingPreset2} label="Preset 2" />
-                    <Momentary control={controls.LightingPreset3} label="Preset 3" />
+                    <Momentary control={controls['LD-Preset_1']['input']} label="Preset 1" />
+                    <Momentary control={controls['LD-Preset_2']['input']} label="Preset 2" />
+                    <Momentary control={controls['LD-Preset_3']['input']} label="Preset 3" />
                 </Stack>
             </Stack>
             </Box> 

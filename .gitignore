@@ -2,3 +2,6 @@
 node_modules
 \[OLD]package.json
 .env
+nv32.crt
+.gitignore
+nv32.key
